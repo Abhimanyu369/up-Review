@@ -5,9 +5,9 @@
       :key='n'
       class="">
     <v-card
-      class='mx-auto'
-      color='#26c6da'
-      dark
+      class='mx-auto .header-card'
+      color='#ffffff'
+      style="border-radius : 15px;"
       max-width='350'
       max-height='200'
     >
@@ -42,3 +42,4 @@
   </div>
 </template>
 <script>
+

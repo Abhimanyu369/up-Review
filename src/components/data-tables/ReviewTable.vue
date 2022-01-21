@@ -1,15 +1,15 @@
 <template>
   <div class="ma-2">
-    <ag-grid :columnDefs='columnDefs' :rowData='rowData' ></ag-grid>
+    <ag-grid :columnDefs="columnDefs" :rowData="rowData"></ag-grid>
   </div>
 </template>
 
 <script>
-import AgGrid from '@/components/base/AgGrid.vue';
-import reviewData from '@/assets/reviewData.json';
+import AgGrid from "@/components/base/AgGrid.vue";
+import reviewData from "@/assets/reviewData.json";
 
 export default {
-  name: 'ReviewTable',
+  name: "ReviewTable",
   components: {
     AgGrid,
   },
@@ -28,16 +28,29 @@ export default {
   beforeMount() {
     this.columnDefs = [
       {
-        headerName: 'Reviewer Id',
-        field: 'reviewerID',
+        headerName: "Reviewer Id",
+        field: "reviewerID",
+        filter: "agTextColumnFilter",
       },
-      { headerName: 'asin', field: 'asin' },
-      { headerName: 'Reviewer Name', field: 'reviewerName' },
-      { headerName: 'Review Text', field: 'reviewText' },
-      { headerName: 'Helpful', field: 'helpful' },
-      { headerName: 'Overall', field: 'overall' },
-      { headerName: 'Summary', field: 'summary' },
-      { headerName: 'Review Time', field: 'reviewTime' },
+      { headerName: "asin", field: "asin", filter: "agTextColumnFilter" },
+      {
+        headerName: "Reviewer Name",
+        field: "reviewerName",
+        filter: "agTextColumnFilter",
+      },
+      {
+        headerName: "Review Text",
+        field: "reviewText",
+        filter: "agTextColumnFilter",
+      },
+      { headerName: "Helpful", field: "helpful", filter: "agTextColumnFilter" },
+      { headerName: "Overall", field: "overall", filter: "agTextColumnFilter" },
+      { headerName: "Summary", field: "summary", filter: "agTextColumnFilter" },
+      {
+        headerName: "Review Time",
+        field: "reviewTime",
+        filter: "agTextColumnFilter",
+      },
     ];
     console.log(reviewData);
     this.rowData = reviewData;
