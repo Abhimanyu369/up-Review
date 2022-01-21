@@ -32,7 +32,7 @@ export default {
         field: "reviewerID",
         filter: "agTextColumnFilter",
       },
-      { headerName: "asin", field: "asin", filter: "agTextColumnFilter" },
+      { headerName: "Asin", field: "asin", filter: "agTextColumnFilter" },
       {
         headerName: "Reviewer Name",
         field: "reviewerName",
@@ -52,7 +52,6 @@ export default {
         filter: "agTextColumnFilter",
       },
     ];
-    console.log(reviewData);
     this.rowData = reviewData;
   },
 };

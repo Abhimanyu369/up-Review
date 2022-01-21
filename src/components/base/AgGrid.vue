@@ -26,14 +26,23 @@ export default {
       required: true,
     },
   },
-  data () {
+  data() {
     return {
       defaultColDef: {
         resizable: true,
         sortable: true,
         filter: true,
+        headerClass: "header-grid-class",
       },
     };
   },
 };
 </script>
+<style >
+.header-grid-class {
+  background: radial-gradient(#f7dee1	, transparent) !important;
+  color: #363472;
+  font-family: Roboto;
+  font-size: 14px ;
+}
+</style>
